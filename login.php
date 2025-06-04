@@ -41,6 +41,26 @@
       </footer>
 
     </div>
+    <div class="row justify-content-end fixed-bottom">
+      <div class="col-12 col-sm-6 col-md-4 ml-2 mr-2">
+    <div class="alert alert-warning ">
+      <?php
+      if(isset($_GET['return'])){
+        echo'
+        <div class="alert alert-warning p-3">
+        <h4 class="text-center">
+        '.$_GET['return'].'
+        </h4>
+        </div>
+        ';
+      }
+      ?>
+    </div>
+    </div>
+    </div>
+    
+      
+   
   </div>
 
 </body>

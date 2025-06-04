@@ -1,9 +1,10 @@
 <?php
 if($_POST['usuario']  == 'admin' && $_POST['senha'] == 'senha'){
   session_start();
-  $_SESSION['login'] == $_POST['login'];
+  $_SESSION['usuario'] = $_POST['usuario'];
 }else{
-  echo"<script> alert('Opa... deu merda!' ) </script>";
+  // echo"<script> alert('Opa... deu merda!' ) </script>";
+  header('location: login.php?return=Opa deu merda!!!');
 }
 ?>
 <!DOCTYPE html>
@@ -27,7 +28,7 @@ if($_POST['usuario']  == 'admin' && $_POST['senha'] == 'senha'){
 
   <div class="alert alert-success " role="alert">
     <?php
-    echo "<h4 class='alert-heading mt-3 mr-5 ml-5'>Seja bem vindo ao sistema ". $_SESSION['login'] ."!</h4>";
+    echo "<h4 class='alert-heading mt-3 mr-5 ml-5'>Seja bem vindo ao sistema ". $_SESSION['usuario'] ."!</h4>";
     ?>
   <button type="button" class="btn btn-outline-dark btn-block mt-4 mb-4">Ir para a proxima pagina</button>
 </div>
